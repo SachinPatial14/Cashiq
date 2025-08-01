@@ -26,7 +26,7 @@ export const TransferProvider = ({children})=>{
     };
 
     const getTransfersByUser = (accountNumber)=>{
-        return transfers.filter((t)=> t.from === accountNumber || t.to === accountNumber)
+        return transfers.filter((t)=> t.from === accountNumber || Number(t.to) === accountNumber)
         .map((t)=>({
             ...t ,
             status : t.from === accountNumber ? "Sent":"Received",
