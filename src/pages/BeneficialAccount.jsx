@@ -17,8 +17,16 @@ const BeneficialAccount = () => {
         amount: "",
         description: "",
     });
+    const [currentPage,setCurrentPage] = useState(1);
+    const itemsPerPage = 4;
 
     const transfers = getTransfersByUser(currentUser?.accountNumber);
+
+    const indexOfLastItem = currentPage * itemsPerPage ;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage ;
+    const filerTransfers = transfers.slice(indexOfFirstItem,indexOfLastItem) ;
+    const totalPages = Math.ceil(transfers.length/itemsPerPage) ;
+
 
     useEffect(() => {
         const loadInActiveUsers = async () => {
@@ -138,6 +146,27 @@ const BeneficialAccount = () => {
                                 )}
                             </tbody>
                         </table>
+                    </div>
+                     <div className="d-flex justify-content-center align-items-center mt-3">
+                        <button
+                            type="button"
+                            className="btn btn-outline-primary me-2"
+                            onClick={()=> setCurrentPage((prev)=> Math.max(prev - 1,1))}
+                            disabled={currentPage === 1}
+                        >
+                            Previous
+                        </button>
+                        <span className="mx-2">
+                            Page {currentPage} of {totalPages}
+                        </span>
+                        <button
+                            type="button"
+                            className="btn btn-outline-primary ms-2"
+                            onClick={()=> setCurrentPage((prev)=> Math.min(prev + 1,totalPages))}
+                            disabled={currentPage === totalPages || totalPages === 0 }
+                        >
+                            Next
+                        </button>
                     </div>
                 </div>
             </div>
