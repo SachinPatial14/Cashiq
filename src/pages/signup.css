@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.link-underline-primary {
+  color: #F85E00;
+  text-decoration: none;       /* no underline by default */
+  transition: text-decoration 0.2s ease-in-out;
+}
+
+.link-underline-primary:hover {
+  text-decoration: underline;  /* underline on hover */
+}
+
+#submitSignup{
+     background-color :#7B5E7B ;
+   transition: background-color 0.2s ease-in-out;
+
+
+}
+#submitSignup:hover{
+   background-color: #285238;
+}
