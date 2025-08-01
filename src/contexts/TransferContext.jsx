@@ -34,8 +34,10 @@ export const TransferProvider = ({children})=>{
     };
 
     useEffect(()=>{
+        if(currentUser){
         fetchTransfers() ;
-    },[]);
+        }
+    },[currentUser]);
 
     return(
         <TransferContext.Provider value={{transfers,addTransfer,getTransfersByUser}}>

@@ -16,9 +16,9 @@ export const BalanceProvider = ({ children }) => {
     const calculateTransferAdjustments = ()=>{
          if (!currentUser) return 0;
 
-        const sent = transfers.filter((t)=> t.from === currentUser.accountNumber)
+        const sent = transfers.filter((t)=> String(t.from) === String(currentUser.accountNumber))
         .reduce((sum,t)=> sum + Number(t.amount),0);
-        const received = transfers.filter((t)=> t.to === currentUser.accountNumber)
+        const received = transfers.filter((t)=> String(t.to) === String(currentUser.accountNumber))
         .reduce((sum,t)=> sum + Number(t.amount),0);
         return received - sent ;
     };
