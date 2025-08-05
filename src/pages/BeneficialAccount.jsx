@@ -71,7 +71,7 @@ const BeneficialAccount = () => {
     }
 
     return (
-        <div className="container-fluid text-white" style={{ backgroundColor: "#FDFFFC", minHeight: "100%", borderRadius: "1rem", padding: "2rem" }}>
+        <div className="container-fluid text-white" style={{ backgroundColor: "#FDFFFC", minHeight: "100%", borderRadius: "1rem", padding: "1rem" }}>
             <h3 className="mb-4 fw-semibold " style={{ color: "#DA7422" }} >Account Overview</h3>
 
             {/* Combined Card: Account No. & Total Balance */}
