@@ -1,11 +1,12 @@
 .loanBtn{
-    background-color: #33658A;
-    color:#fff;
+    background-color: #27476E;
+    color: #fff;
     border: none;
+    border-radius: 8px;
     transition: background-color 0.2s ease-in-out;
 }
 
 .loanBtn:hover{
-    background-color: #2F4858;
-    color: #fff;
+    background-color: #001D4A;
+    color: #fff ;
 }

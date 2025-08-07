@@ -261,6 +261,14 @@
       "amount": "1505.63",
       "date": "2025-08-06T09:27:06.191Z",
       "description": "EMI for study loan"
+    },
+    {
+      "id": "c7fd",
+      "userId": "409d",
+      "category": "EMI Payment",
+      "amount": "1283.04",
+      "date": "2025-08-07T05:03:26.425Z",
+      "description": "EMI for buisnees loan"
     }
   ],
   "incomes": [
@@ -405,6 +413,15 @@
       "userId": "409d",
       "amountPaid": "1505.63",
       "paymentDate": "2025-08-06",
+      "month": "August",
+      "year": 2025
+    },
+    {
+      "id": "7d13",
+      "loanId": "ce2e",
+      "userId": "409d",
+      "amountPaid": "1283.04",
+      "paymentDate": "2025-08-07",
       "month": "August",
       "year": 2025
     }

@@ -132,7 +132,7 @@ const LoanManager = () => {
       </h3>
 
       <div className="d-flex justify-content-end mb-3">
-        <button className="btn loanBtn"  onClick={() => navigate("/home/loanform")}>Take Loan</button>
+        <button className=" loanBtn"  onClick={() => navigate("/home/loanform")}>Take Loan</button>
       </div>
 
       <div className="table-responsive">
