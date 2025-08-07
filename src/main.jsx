@@ -9,20 +9,23 @@ import { AuthProvider } from './contexts/AuthContext.jsx';
 import { IncomeProvider } from './contexts/IncomeContext.jsx';
 import { BalanceProvider } from './contexts/BalanceContext.jsx';
 import { TransferProvider } from './contexts/TransferContext.jsx';
+import { LoanProvider } from './contexts/LoanContext.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
       <TransferProvider>
-        <ExpenseProvider>
-          <IncomeProvider>
-            <BalanceProvider>
-              <CurrencyProvider>
-                <App />
-              </CurrencyProvider>
-            </BalanceProvider>
-          </IncomeProvider>
-        </ExpenseProvider>
+        <LoanProvider>
+          <ExpenseProvider>
+            <IncomeProvider>
+              <BalanceProvider>
+                <CurrencyProvider>
+                  <App />
+                </CurrencyProvider>
+              </BalanceProvider>
+            </IncomeProvider>
+          </ExpenseProvider>
+        </LoanProvider>
       </TransferProvider>
     </AuthProvider>
   </StrictMode>

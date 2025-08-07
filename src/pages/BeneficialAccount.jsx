@@ -131,10 +131,10 @@ const BeneficialAccount = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {transfers.length === 0 ? (
+                                {filerTransfers.length === 0 ? (
                                     <tr><td colSpan="5" className="text-center">No transfers</td></tr>
                                 ) : (
-                                    transfers.map((t) => (
+                                    filerTransfers.map((t) => (
                                         <tr key={t.id}>
                                             <td>{t.from}</td>
                                             <td>{t.to}</td>

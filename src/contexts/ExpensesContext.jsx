@@ -17,12 +17,12 @@ export const ExpenseProvider = ({ children }) => {
     const lastMonthEnd = endOfMonth(subMonths(new Date(),1));
 
     const last30DaysExpenses = expenses.filter(item => isAfter(parseISO(item.date),thirtyDaysAgo)).
-    reduce((acc,curr)=> acc + curr.amount,0) ;
+    reduce((acc,curr)=> acc + parseFloat(curr.amount || 0),0) ;
 
     const lastMonthExpenses = expenses.filter(item=> isWithinInterval(parseISO(item.date),{
       start : lastMonthStart ,
       end : lastMonthEnd ,
-    })).reduce((acc,curr)=> acc + curr.amount ,0) ;
+    })).reduce((acc,curr)=> acc + parseFloat(curr.amount || 0) ,0) ;
 
 
      const fetchExpenses = async () => {

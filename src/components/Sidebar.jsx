@@ -9,6 +9,7 @@ import {
   FaCog,
   FaUser,
   FaSignOutAlt,
+  FaHandHoldingUsd ,
 } from "react-icons/fa";
 import "./sidebar.css";
 import { useNavigate } from "react-router-dom";
@@ -23,10 +24,10 @@ const Sidebar = () => {
   const { logout } = useAuth();
 
   const handleLogout = () => {
-    if(window.confirm("Are you sure want to logout ?")){
-    logout(); 
-    updateCurrency("");
-    navigate("/login");
+    if (window.confirm("Are you sure want to logout ?")) {
+      logout();
+      updateCurrency("");
+      navigate("/login");
     }
   };
 
@@ -45,7 +46,7 @@ const Sidebar = () => {
           onMouseEnter={() => handleMouseEnter("dashboard")}
           onMouseLeave={handleMouseLeave}
           style={getBtnStyle("dashboard")}
-          onClick={()=>navigate("/home")}
+          onClick={() => navigate("/home")}
         >
           <FaTachometerAlt className="me-2" />
           Dashboard
@@ -67,22 +68,34 @@ const Sidebar = () => {
           onMouseEnter={() => handleMouseEnter("incomes")}
           onMouseLeave={handleMouseLeave}
           style={getBtnStyle("incomes")}
-          onClick={()=>navigate("/home/incomelist")}
+          onClick={() => navigate("/home/incomelist")}
         >
           <FaWallet className="me-2" />
           Incomes
         </button>
 
-          <button
+        <button
           className="mb-3 sidebarbtn"
           onMouseEnter={() => handleMouseEnter("beneficialAccount")}
           onMouseLeave={handleMouseLeave}
-          onClick={()=> navigate("/home/beneficialaccount")}
+          onClick={() => navigate("/home/beneficialaccount")}
           style={getBtnStyle("beneficialAccount")}
         >
           <MdAccountCircle className="me-2" />
           Beneficial Account
         </button>
+
+        <button
+          className="mb-3 sidebarbtn"
+          onMouseEnter={() => handleMouseEnter("loanmanager")}
+          onMouseLeave={handleMouseLeave}
+          onClick={() => navigate("/home/loanmanager")}
+          style={getBtnStyle("loanmanager")}
+        >
+          <FaHandHoldingUsd  className="me-2" />
+          Loan Manager
+        </button>
+
 
       </ul>
 
@@ -95,7 +108,7 @@ const Sidebar = () => {
           onMouseEnter={() => handleMouseEnter("expenses summary")}
           onMouseLeave={handleMouseLeave}
           style={getBtnStyle("expenses summary")}
-          onClick={()=> navigate("/home/expensesummary")}
+          onClick={() => navigate("/home/expensesummary")}
         >
           <FaChartPie className="me-2" />
           Expense Summary
@@ -105,7 +118,7 @@ const Sidebar = () => {
           onMouseEnter={() => handleMouseEnter("income summary")}
           onMouseLeave={handleMouseLeave}
           style={getBtnStyle("income summary")}
-          onClick={()=> navigate("/home/incomesummary")}
+          onClick={() => navigate("/home/incomesummary")}
         >
           <FaChartBar className="me-2" />
           Income Summary

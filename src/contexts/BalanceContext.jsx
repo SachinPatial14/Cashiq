@@ -3,6 +3,7 @@ import { useExpenses } from "./ExpensesContext";
 import { useIncomes } from "./IncomeContext";
 import { useTransfers } from "./TransferContext";
 import { useAuth } from "./AuthContext";
+import { useLoans } from "./LoanContext";
 
 export const BalanceContext = createContext();
 
@@ -12,6 +13,7 @@ export const BalanceProvider = ({ children }) => {
     const [balance, setBalance] = useState(0);
     const {transfers} = useTransfers() ;
     const {currentUser} = useAuth() ;
+    const {loans} = useLoans() ;
 
     const calculateTransferAdjustments = ()=>{
          if (!currentUser) return 0;
@@ -27,9 +29,10 @@ export const BalanceProvider = ({ children }) => {
          if (!currentUser) return ;
          
         const transferDelta = calculateTransferAdjustments() ;
-        const newBalance = totalIncome - totalExpense + transferDelta ;
+        const totalLoanAmount = loans.reduce((sum,loan)=> sum + Number(loan.amount || 0),0)
+        const newBalance = totalIncome - totalExpense + transferDelta + totalLoanAmount ;
         setBalance(newBalance) ;
-    },[totalExpense,totalIncome,transfers,currentUser]);
+    },[totalExpense,totalIncome,transfers,currentUser,loans]);
 
 
 

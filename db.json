@@ -221,6 +221,46 @@
       "category": "Entertainment",
       "date": "2025-07-05",
       "userId": "409d"
+    },
+    {
+      "id": "d8fe",
+      "amount": 1000,
+      "description": "get subscription",
+      "category": "Entertainment",
+      "date": "2025-08-05",
+      "userId": "409d"
+    },
+    {
+      "id": "9366",
+      "amount": 15000,
+      "description": "Buy LED",
+      "category": "Housing",
+      "date": "2025-08-06",
+      "userId": "409d"
+    },
+    {
+      "id": "6693",
+      "userId": "409d",
+      "category": "EMI Payment",
+      "amount": "1006.25",
+      "date": "2025-08-06T07:07:39.313Z",
+      "description": "EMI for home loan"
+    },
+    {
+      "id": "0a98",
+      "userId": "409d",
+      "category": "EMI Payment",
+      "amount": "1677.82",
+      "date": "2025-08-06T09:15:43.799Z",
+      "description": "EMI for property"
+    },
+    {
+      "id": "6177",
+      "userId": "409d",
+      "category": "EMI Payment",
+      "amount": "1505.63",
+      "date": "2025-08-06T09:27:06.191Z",
+      "description": "EMI for study loan"
     }
   ],
   "incomes": [
@@ -238,6 +278,14 @@
       "description": "monthly salary",
       "source": "Salary",
       "date": "2025-07-31",
+      "userId": "409d"
+    },
+    {
+      "id": "d382",
+      "amount": 20000,
+      "description": "profit from buisness",
+      "source": "Buisness",
+      "date": "2025-08-06",
       "userId": "409d"
     }
   ],
@@ -273,6 +321,92 @@
       "amount": 850,
       "description": "please accept money",
       "date": "2025-08-01T09:41:32.776Z"
+    }
+  ],
+  "loan": [
+    {
+      "id": "541f",
+      "loantype": "home loan",
+      "amount": 2000,
+      "rateofinterest": 5,
+      "tenuremonths": 2,
+      "monthlyemi": "1006.25",
+      "startdate": "2025-08-05",
+      "enddate": "2025-10-05",
+      "userId": "409d"
+    },
+    {
+      "id": "d5e7",
+      "loantype": "property",
+      "amount": 5000,
+      "rateofinterest": 4.01,
+      "tenuremonths": 3,
+      "monthlyemi": "1677.82",
+      "startdate": "2025-08-05",
+      "enddate": "2025-11-05",
+      "userId": "409d"
+    },
+    {
+      "id": "144d",
+      "loantype": "study loan",
+      "amount": 3000,
+      "rateofinterest": 3,
+      "tenuremonths": 2,
+      "monthlyemi": "1505.63",
+      "startdate": "2025-08-05",
+      "enddate": "2025-10-05",
+      "userId": "409d"
+    },
+    {
+      "id": "ce2e",
+      "loantype": "buisnees loan",
+      "amount": 10000,
+      "rateofinterest": 7,
+      "tenuremonths": 8,
+      "monthlyemi": "1283.04",
+      "startdate": "2025-08-05",
+      "enddate": "2026-04-05",
+      "userId": "409d"
+    },
+    {
+      "id": "320e",
+      "loantype": "vehicle loan",
+      "amount": 5001,
+      "rateofinterest": 5,
+      "tenuremonths": 3,
+      "monthlyemi": "1680.91",
+      "startdate": "2025-08-05",
+      "enddate": "2025-11-05",
+      "userId": "409d"
+    }
+  ],
+  "emipayment": [
+    {
+      "id": "5078",
+      "loanId": "541f",
+      "userId": "409d",
+      "amountPaid": "1006.25",
+      "paymentDate": "2025-08-06",
+      "month": "August",
+      "year": 2025
+    },
+    {
+      "id": "fda6",
+      "loanId": "d5e7",
+      "userId": "409d",
+      "amountPaid": "1677.82",
+      "paymentDate": "2025-08-06",
+      "month": "August",
+      "year": 2025
+    },
+    {
+      "id": "8b88",
+      "loanId": "144d",
+      "userId": "409d",
+      "amountPaid": "1505.63",
+      "paymentDate": "2025-08-06",
+      "month": "August",
+      "year": 2025
     }
   ]
 }

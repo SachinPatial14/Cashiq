@@ -14,6 +14,8 @@ import IncomeList from './pages/IncomeList';
 import IncomeForm from './pages/IncomeForm';
 import IncomeSummary from './pages/IncomeSummary';
 import BeneficialAccount from './pages/BeneficialAccount';
+import LoanManager from './pages/LoanManager';
+import LoanForm from './pages/LoanForm';
 
 function App() {
   return (
@@ -32,8 +34,10 @@ function App() {
           <Route path='expensesummary' element={<ExpenseSummary />} />
           <Route path='incomelist' element={<IncomeList />} />
           <Route path='incomeform' element={<IncomeForm />} />
-          <Route path='incomesummary' element={<IncomeSummary /> } />
+          <Route path='incomesummary' element={<IncomeSummary />} />
           <Route path='beneficialaccount' element={<BeneficialAccount />} />
+          <Route path='loanmanager' element={<LoanManager />} />
+          <Route path='loanform' element={<LoanForm />} />
         </Route>
       </Routes>
     </BrowserRouter>
