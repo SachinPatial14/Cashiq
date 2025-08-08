@@ -127,24 +127,24 @@ npm run dev
 
 ## Dashboard view 
 
-![Dashboard](public/images/dashboard.png) 
+<img src="public/images/dashboard.png" alt="dashboard" width="100%" />
 
 ## Expense Table
 
-![Expense](public/images/expense.png)
+<img src="public/images/expense.png" alt="expense" width="100%" />
 
 ## Income Form
 
-![Income](public/images/income.png)
+<img src="public/images/income.png" alt="income" width="100%" />
 
 ## Chart 
 
-![Chart] (public/images/chart.png)
+<img src="public/images/chart.png" alt="chart" width="100%" />
 
 ## Loan Manager
 
-![Loan](public/images/loan.png)
+<img src="public/images/loan.png" alt="loan" width="100%" />
 
 ## Beneficiary Account
 
-![Beneficiary](public/images/beneficiary.png)
+<img src="public/images/beneficiary.png" alt="beneficiary" width="100%" />
