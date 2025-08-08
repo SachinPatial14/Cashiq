@@ -23,7 +23,7 @@ const ExpenseSummary = () => {
   const pieData = useMemo(() => {
     const sums = {};
     for (let exp of filtered) {
-      sums[exp.category] = (sums[exp.category] || 0) + exp.amount;
+      sums[exp.category] = (sums[exp.category] || 0) + Number(exp.amount);
     }
     return Object.entries(sums).map(([category, value]) => ({ category, value }))
   }, [filtered]);
