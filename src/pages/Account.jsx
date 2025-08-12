@@ -28,9 +28,15 @@ const Account = () => {
         }
     }, []);
 
-    const updateUser = (e) => {
+    const updateUser = async(e) => {
         e.preventDefault();
 
+        try{
+          const res = await axios.get(`${userAPI}?email=${email}`) ;
+          if(res.data.length >0){
+            alert("Email is already exist, Set another email") ;
+            setEmail("");
+          }else{
         axios.patch(`${userAPI}/${loggedId}`, {
             name: fullName,
             email: email,
@@ -44,6 +50,12 @@ const Account = () => {
         }).catch((err) => {
             console.error("failed to update Data ", err);
         })
+
+          }
+        }catch(err){
+            console.error("Error occurred in updating user",err);
+        }
+
 
     };
 
